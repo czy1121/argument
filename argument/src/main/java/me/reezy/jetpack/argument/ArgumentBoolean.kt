@@ -1,10 +1,19 @@
 package me.reezy.jetpack.argument
 
 import android.os.Bundle
+import java.util.*
 
 
 class ArgumentBoolean(default: Boolean = false, key: String? = null): ArgumentField<Boolean>(default, key) {
     override fun get(field: String, bundle: Bundle): Boolean {
-        return bundle.getBoolean(field, default)
+        val o = bundle[field] ?: return default
+        return when (o.toString().toLowerCase(Locale.ROOT)) {
+            "false" -> false
+            "0" -> false
+            "" -> false
+            "true" -> true
+            "1" -> true
+            else -> true
+        }
     }
 }
