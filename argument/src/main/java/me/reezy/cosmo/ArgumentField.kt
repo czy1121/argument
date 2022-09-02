@@ -1,4 +1,4 @@
-package me.reezy.jetpack.argument
+package me.reezy.cosmo
 
 import android.app.Activity
 import android.os.Bundle
@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import kotlin.properties.ReadOnlyProperty
 import kotlin.reflect.KProperty
 
-abstract class ArgumentField<T>(val default: T, private val key: String?): ReadOnlyProperty<Any, T> {
+abstract class ArgumentField<T>(protected val default: T, private val key: String?): ReadOnlyProperty<Any, T> {
 
     override operator fun getValue(thisRef: Any, property: KProperty<*>): T {
         if (thisRef is Activity) {

@@ -10,10 +10,10 @@
 
 ``` groovy
 repositories { 
-    maven { url "https://gitee.com/ezy/repo/raw/android_public/"}
+    maven { url "https://gitee.com/ezy/repo/raw/cosmo/"}
 } 
 dependencies {
-    implementation "me.reezy.jetpack:argument:0.4.0" 
+    implementation "me.reezy.cosmo:argument:0.7.0"
 }
 ```
  

@@ -1,4 +1,4 @@
-package me.reezy.jetpack.argument
+package me.reezy.cosmo
 
 import android.os.Bundle
 

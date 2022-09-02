@@ -1,7 +1,6 @@
-package me.reezy.jetpack.argument
+package me.reezy.cosmo
 
 import android.os.Bundle
-import me.reezy.jetpack.argument.ArgumentField
 
 
 class ArgumentString(default: String = "", key: String?= null): ArgumentField<String>(default, key) {
